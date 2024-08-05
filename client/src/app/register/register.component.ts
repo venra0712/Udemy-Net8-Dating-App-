@@ -19,6 +19,7 @@ export class RegisterComponent {
   register() {
     this.accountService.register(this.model).subscribe({
       next: response => {
+        this.toastr.success("Successfully Registered. Welcome!")
         console.log(response);
         this.cancel();
       },
